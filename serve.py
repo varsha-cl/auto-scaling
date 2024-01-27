@@ -13,10 +13,7 @@ def get():
 
 @app.post('/')
 def run_street_cpu():
-    process = Popen(['python3', 'stress_cpu.py'], stdout=PIPE, stderr=PIPE)
-    stdout, stderr = process.communicate()
-    print(stdout)
-    print(stderr)
+    Popen(['python3', 'stress_cpu.py'], stdout=PIPE, stderr=PIPE)
     return "Success"
 
 if __name__ == "__main__":
